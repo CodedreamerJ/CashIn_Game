@@ -8,6 +8,7 @@ import SpriteKit
 
 class MainMenu: SKScene {
 
+  
     func loadGame() {
         /* 1) Grab reference to our SpriteKit view */
         guard let skView = self.view as SKView? else {
@@ -16,7 +17,7 @@ class MainMenu: SKScene {
         }
 
         /* 2) Load Game scene */
-        guard let scene = GameScene(fileNamed:"GameScene") else {
+        guard let scene = MainMenu(fileNamed:"MainMenu.sks") else {
             print("Could not make GameScene, check the name is spelled correctly")
             return
         }
@@ -32,7 +33,7 @@ class MainMenu: SKScene {
         /* 4) Start game scene */
         skView.presentScene(scene)
     }
-    
+//
 
 /* UI Connections */
     var startButton: MSButtonNode!
@@ -43,7 +44,8 @@ class MainMenu: SKScene {
     /* Set UI connections */
     startButton = self.childNode(withName: "startButton") as! MSButtonNode
     startButton.selectedHandler = {
-        self.loadGame()
+        //self.loadGame()
+        let _:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as UIViewController
     }
 
     }
