@@ -16,10 +16,10 @@
 		C4589534257C535B00F35954 /* Cash_InUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4589533257C535B00F35954 /* Cash_InUITests.swift */; };
 		C458954F257D781F00F35954 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458954E257D781F00F35954 /* MSButtonNode.swift */; };
 		C4589554257D7EF600F35954 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4589553257D7EF600F35954 /* playbutton.png */; };
-		C4617B562582CB36007C6444 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4617B552582CB36007C6444 /* MainMenu.sks */; };
-		C4617B612582CB8B007C6444 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4617B602582CB8B007C6444 /* MainMenu.swift */; };
+		C4617B562582CB36007C6444 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4617B552582CB36007C6444 /* MainMenuScene.sks */; };
 		C4617B7C2582DFB2007C6444 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4617B7B2582DFB2007C6444 /* GameViewController.swift */; };
-		C4F5E68A25832530003F0BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F5E68925832530003F0BB6 /* Main.storyboard */; };
+		C4A368CF258802BA00829767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A368CE258802BA00829767 /* Main.storyboard */; };
+		C4F5E6B0258411AF003F0BB6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5E6AF258411AF003F0BB6 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		C4589535257C535B00F35954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C458954E257D781F00F35954 /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		C4589553257D7EF600F35954 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
-		C4617B552582CB36007C6444 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenu.sks; path = "/Users/jlloyd/CPSC357/CashIn_Game/Cash In/Cash In/MainMenu.sks"; sourceTree = "<absolute>"; };
-		C4617B602582CB8B007C6444 /* MainMenu.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = MainMenu.swift; sourceTree = "<group>"; };
-		C4617B7B2582DFB2007C6444 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../../../../.Trash/GameViewController.swift; sourceTree = "<group>"; };
-		C4F5E68925832530003F0BB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C4617B552582CB36007C6444 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenuScene.sks; path = "/Users/jlloyd/CPSC357/CashIn_Game/Cash In/Cash In/MainMenuScene.sks"; sourceTree = "<absolute>"; };
+		C4617B7B2582DFB2007C6444 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = "/Users/jlloyd/CPSC357/CashIn_Game/Cash In/Cash In/GameViewController.swift"; sourceTree = "<absolute>"; };
+		C4A368CE258802BA00829767 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../../../../Downloads/CashIn_Game-main 2/Cash In/Cash In/Main.storyboard"; sourceTree = "<group>"; };
+		C4F5E6AF258411AF003F0BB6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +107,15 @@
 		C458950F257C535700F35954 /* Cash In */ = {
 			isa = PBXGroup;
 			children = (
-				C4617B552582CB36007C6444 /* MainMenu.sks */,
+				C4617B552582CB36007C6444 /* MainMenuScene.sks */,
 				C4589553257D7EF600F35954 /* playbutton.png */,
 				C4589510257C535700F35954 /* AppDelegate.swift */,
 				C4589514257C535700F35954 /* Actions.sks */,
 				C4617B7B2582DFB2007C6444 /* GameViewController.swift */,
-				C4617B602582CB8B007C6444 /* MainMenu.swift */,
+				C4F5E6AF258411AF003F0BB6 /* MenuViewController.swift */,
 				C458951D257C535A00F35954 /* Assets.xcassets */,
+				C4A368CE258802BA00829767 /* Main.storyboard */,
 				C458951F257C535A00F35954 /* Info.plist */,
-				C4F5E68925832530003F0BB6 /* Main.storyboard */,
 				C458954E257D781F00F35954 /* MSButtonNode.swift */,
 			);
 			path = "Cash In";
@@ -244,8 +244,8 @@
 			files = (
 				C458951E257C535A00F35954 /* Assets.xcassets in Resources */,
 				C4589554257D7EF600F35954 /* playbutton.png in Resources */,
-				C4F5E68A25832530003F0BB6 /* Main.storyboard in Resources */,
-				C4617B562582CB36007C6444 /* MainMenu.sks in Resources */,
+				C4A368CF258802BA00829767 /* Main.storyboard in Resources */,
+				C4617B562582CB36007C6444 /* MainMenuScene.sks in Resources */,
 				C4589515257C535700F35954 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4617B7C2582DFB2007C6444 /* GameViewController.swift in Sources */,
-				C4617B612582CB8B007C6444 /* MainMenu.swift in Sources */,
+				C4F5E6B0258411AF003F0BB6 /* MenuViewController.swift in Sources */,
 				C4589511257C535700F35954 /* AppDelegate.swift in Sources */,
 				C458954F257D781F00F35954 /* MSButtonNode.swift in Sources */,
 			);
