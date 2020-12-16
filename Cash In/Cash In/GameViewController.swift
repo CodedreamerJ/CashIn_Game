@@ -15,7 +15,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-//We are using a struct to hold our questions data from the question itself, for answer options and the actual answer in terms of an integer
+//We/Users/jlloyd/Downloads/CashIn_Game-main 2/Cash In/Cash In/Main.storyboard are using a struct to hold our questions data from the question itself, for answer options and the actual answer in terms of an integer
 struct ListofQuestions  {
     var Question : String!
     var Answers : [String]!
@@ -42,6 +42,7 @@ class GameViewController: UIViewController {
    var questionNumber = Int()
    var answerNumber = Int()
     
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
