@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA9D5937258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = AA9D5936258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj */; };
 		C40E23D6258302AF008430AE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4589514257C535700F35954 /* Actions.sks */; };
 		C40E23DA258302B0008430AE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4589514257C535700F35954 /* Actions.sks */; };
 		C4589511257C535700F35954 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4589510257C535700F35954 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA9D5936258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Cash In 5.36.23 PM.xcodeproj"; path = "../Cash In 5.36.23 PM.xcodeproj"; sourceTree = "<group>"; };
 		C458950D257C535700F35954 /* Cash In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cash In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4589510257C535700F35954 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4589514257C535700F35954 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -53,9 +55,9 @@
 		C4589535257C535B00F35954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C458954E257D781F00F35954 /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		C4589553257D7EF600F35954 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
-		C4617B552582CB36007C6444 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenuScene.sks; path = "/Users/jlloyd/CPSC357/CashIn_Game/Cash In/Cash In/MainMenuScene.sks"; sourceTree = "<absolute>"; };
-		C4617B7B2582DFB2007C6444 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = "/Users/jlloyd/CPSC357/CashIn_Game/Cash In/Cash In/GameViewController.swift"; sourceTree = "<absolute>"; };
-		C4A368CE258802BA00829767 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../../../../Downloads/CashIn_Game-main 2/Cash In/Cash In/Main.storyboard"; sourceTree = "<group>"; };
+		C4617B552582CB36007C6444 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MainMenuScene.sks; path = "/Users/cpsc/Downloads/CashIn_Game-main/Cash In/Cash In/MainMenuScene.sks"; sourceTree = "<absolute>"; };
+		C4617B7B2582DFB2007C6444 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = "/Users/cpsc/Downloads/CashIn_Game-main/Cash In/Cash In/GameViewController.swift"; sourceTree = "<absolute>"; };
+		C4A368CE258802BA00829767 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		C4F5E6AF258411AF003F0BB6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA9D593E258A588A00BA1374 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C4589504257C535700F35954 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +119,7 @@
 				C4589510257C535700F35954 /* AppDelegate.swift */,
 				C4589514257C535700F35954 /* Actions.sks */,
 				C4617B7B2582DFB2007C6444 /* GameViewController.swift */,
+				AA9D5936258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj */,
 				C4F5E6AF258411AF003F0BB6 /* MenuViewController.swift */,
 				C458951D257C535A00F35954 /* Assets.xcassets */,
 				C4A368CE258802BA00829767 /* Main.storyboard */,
@@ -228,6 +236,12 @@
 			mainGroup = C4589504257C535700F35954;
 			productRefGroup = C458950E257C535700F35954 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AA9D593E258A588A00BA1374 /* Products */;
+					ProjectRef = AA9D5936258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C458950C257C535700F35954 /* Cash In */,
@@ -245,6 +259,7 @@
 				C458951E257C535A00F35954 /* Assets.xcassets in Resources */,
 				C4589554257D7EF600F35954 /* playbutton.png in Resources */,
 				C4A368CF258802BA00829767 /* Main.storyboard in Resources */,
+				AA9D5937258A3BAD00BA1374 /* Cash In 5.36.23 PM.xcodeproj in Resources */,
 				C4617B562582CB36007C6444 /* MainMenuScene.sks in Resources */,
 				C4589515257C535700F35954 /* Actions.sks in Resources */,
 			);

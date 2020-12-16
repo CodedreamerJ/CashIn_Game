@@ -2,54 +2,55 @@
 //  GameViewController.swift
 //  Cash In
 //
-//  Created by James Romero on 12/5/20.
+//  Created by James Romero & Dustin Willard on 12/5/20.
 //
-/* Todo List
+/* To-do List
  -Menu Screen
  -Game Screen
  -Answer Object
  -Question Object
- 
  */
+
+
 import UIKit
 import SpriteKit
 import GameplayKit
 
 //We/Users/jlloyd/Downloads/CashIn_Game-main 2/Cash In/Cash In/Main.storyboard are using a struct to hold our questions data from the question itself, for answer options and the actual answer in terms of an integer
-struct ListofQuestions  {
+struct ListofQuestions {
     var Question : String!
     var Answers : [String]!
     var Answer : Int!
 }
 
-
-
 class GameViewController: UIViewController {
     
-    
+    //This scrollView we may not need
     @IBOutlet weak var scrollView: UIScrollView!
     //This label will be used to present a question to the user
     @IBOutlet weak var qLabel: UILabel!
    //This array of buttons will be used to present a list of 4 answers
     @IBOutlet var Buttons: [UIButton]!
-    //This button will be used to allow user to take his money and dip(another word for go)
+    //This button will be used to allow user to take his money and dip (another word for go)
     @IBOutlet weak var contentButton: UIButton!
-    //This label will be used as a score feature which will display money earned
+    //This label will be used as a quit feature that will allow the user to exit the game
     @IBOutlet weak var gameScore: UILabel!
+    //This label will be used as a score feature which will display money earned
+    
     
     //Array of question structures that was created
    var Questions = [ListofQuestions]() //Type Inference
    var questionNumber = Int()
-   var answerNumber = Int()
+    var answerNumber = Int()
    var score = Int()
-   var currentQuestion = Int()
-    
+    var currentQuestion = Int()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Need to add UI scrollview
         
+        //We may not need to add UI scrollview
+
        
 //            // Load the SKScene from 'GameScene.sks'
 //            if let scene = MainMenu(fileNamed: "MainMenu") {
@@ -66,9 +67,9 @@ class GameViewController: UIViewController {
 //            view.showsNodeCount = true
             
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //We will add our questions manually. There is an easier way of doing this as reading in questions from a file. Still learing the swift language
+            //We will add our questions manually. There is an easier way of doing this as reading in questions from a file. Still learning the swift language
             Questions = [ListofQuestions(Question: "In the UK, the abbreviation NHS stands for National what Service?", Answers: ["Humanity", "Health", "Honour", "Household"], Answer: 2),
-                         ListofQuestions(Question: "Which Disney character famously leaves a glass slipper behind at a royal ball?", Answers: ["Pocahontas", "Sleeping Beauty", "Cinderella", "Elsa"], Answer: 3),
+                        ListofQuestions(Question: "Which Disney character famously leaves a glass slipper behind at a royal ball?", Answers: ["Pocahontas", "Sleeping Beauty", "Cinderella", "Elsa"], Answer: 3),
                          ListofQuestions(Question: "What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?", Answers: ["Hangar", "Terminal", "Concourse", "Carousel"], Answer: 3),
                          ListofQuestions(Question: "Which of these brands was chiefly associated with the manufacture of household locks?", Answers: ["Phillips", "Flymo", "Chubb", "Ronseal"], Answer: 3),
                          ListofQuestions(Question: "The hammer and sickle is one of the most recognisable symbols of which political ideology?", Answers: ["Republicanism", "Communism", "Conservatism", "Liberalism"], Answer: 2),
@@ -79,9 +80,7 @@ class GameViewController: UIViewController {
                          ListofQuestions(Question: "Which of these religious observances lasts for the shortest period of time during the calendar year?", Answers: ["Ramadan", "Diwali", "Lent", "Hanukkah"], Answer: 1),
                          ListofQuestions(Question: "At the closest point, which island group is only 50 miles south-east of the coast of Florida?", Answers: ["Bahamas", "US Virgin Islands", "Turks and Caicos Islands", "Bermuda"], Answer: 2),
                          ListofQuestions(Question: "Construction of which of these famous landmarks was completed first?", Answers: ["Empire State Building", "Royal Albert Hall", "Eiffel Tower", "Big Ben Clock Tower"], Answer: 3)]
-                         
-            
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
         }
     
     //Function is used to select a question but at the same time remove it so that the same question is not used again within the same game
@@ -92,12 +91,10 @@ class GameViewController: UIViewController {
             //Random question generator
             questionNumber = Int(arc4random()) % Questions.count
             qLabel.text = Questions[questionNumber].Question //adds one of the question to the label
-            //We are using a number index to place the question in one of the for buttons
+            //We are using a number index to place the question in one of the four buttons
             x = currentQuestion
             Score(currentQuestion: &x)
-            
-           
-            
+        
             for i in 0..<Buttons.count{
                 //This for loop is used to place 4 of the potential answers inside the buttons
                 Buttons[i].setTitle(Questions[questionNumber].Answers[i], for: .normal)
@@ -114,7 +111,6 @@ class GameViewController: UIViewController {
    
     
     func Score(currentQuestion: inout Int){
-        
         if currentQuestion == 1{
          score = 4000
          gameScore.text = "$$ \(score)"
@@ -150,20 +146,17 @@ class GameViewController: UIViewController {
         if currentQuestion == 8{
          score = 10000000
          gameScore.text = "$$ \(score)"
+         print("Congratulations: You have won the game!!")
         }
-        
         else {
             NSLog("Wrong Answer!")
         }
     }
     
-    
-    
     @IBAction func Btn1(_ sender: Any) {
         if answerNumber == 0{
-            
+            print("That is correct")
             PickQuestion()
-        
         }
         else{
             NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
@@ -176,62 +169,53 @@ class GameViewController: UIViewController {
     
     @IBAction func Btn2(_ sender: Any) {
         if answerNumber == 1{
-            
+            print("That is correct")
             PickQuestion()
          
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
     @IBAction func Btn3(_ sender: Any) {
         if answerNumber == 2{
-            
+            print("That is correct")
             PickQuestion()
             
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
     @IBAction func Btn4(_ sender: Any) {
         if answerNumber == 3{
-            
+            print("That is correct")
             PickQuestion()
             
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
-    @IBAction func BtnR(_ sender: Any) {
+    //Quit button to calculate final score and
+    @IBAction func BtnQ(_ sender: Any) {
         if answerNumber == 4{
-            
-            //ConcedeFunction() add function later
+            let finalScore = Int(score)
+            print("You have 'Cashed-In' - Your score is: ")
+            print(finalScore)
+                    //updateScore()
+                }
+            }
         }
-    }
     
-    
-    override var shouldAutorotate: Bool {
+    var shouldAutorotate: Bool {
         return true
     }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
         } else {
@@ -239,9 +223,22 @@ class GameViewController: UIViewController {
         }
     }
 
-    override var prefersStatusBarHidden: Bool {
-        return true
+    var prefersStatusBarHidden: Bool {
+            return true
+    }
+
+//Quit button function: whenever the player decides to cash-in or quit, the UI will alert them and ask if they want to play again.
+extension GameViewController: SKSceneDelegate{
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        
+        let _: UITouch = (touches.first)!
+        
+        let alert = UIAlertController(title: "Game Finished", message: "You have Cashed-In", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Would you like to start a new game?", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
 }
-
-
