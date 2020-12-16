@@ -6,8 +6,8 @@
 
 OS X & Linux:
 
-```XCode must be downloaded in order to run the game. The game was designed with the IPhone 12 sim. 
-```
+XCode must be downloaded in order to run the game. The game was designed with the IPhone 12 sim. 
+
 
 
 ## Contributing
