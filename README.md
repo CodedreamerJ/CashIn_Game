@@ -12,7 +12,7 @@ XCode must be downloaded in order to run the game. The game was designed with th
 
 ## Contributing
 James Romero 
-Dustin Wallace
+Dustin Willard
 
 ##Sources Used
 Professor Christopher Boyd of Chapman Universitie's lectures and references
