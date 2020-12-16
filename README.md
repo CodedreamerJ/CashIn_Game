@@ -1,5 +1,5 @@
 # CashIn IOS APP
-> The CashIn app is an IOS game based around the user answering question. After each correct is answered the user is awarded a points in reference to money. The ultimate goal is to get to a million dollars. 
+> The CashIn app is an IOS game based around the user answering question. After each correct answer the user is awarded a points in reference to money. The ultimate goal is to get to a million dollars. 
 
 
 ## Installation
@@ -15,7 +15,7 @@ James Romero
 Dustin Willard
 
 ##Sources Used
-Professor Christopher Boyd of Chapman Universitie's lectures and references
+Professor Christopher Boyd of Chapman University's lectures and references
 
 https://www.makeschool.com/academy/track/build-ios-games/clone-angry-birds-with-spritekit-and-swift-3/main-menu
 
