@@ -10,16 +10,15 @@ import SpriteKit
 import GameplayKit
 
 class MenuViewController: UIViewController {
+    
     @IBAction func playButtonPressed(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: "GameViewSegue", sender: self)   }
-    
-    
+        self.performSegue(withIdentifier: "GameViewSegue", sender:self)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-    
-        
         }
      }
  

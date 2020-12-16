@@ -75,6 +75,7 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Quit"/>
                                 <connections>
+                                    <action selector="BtnQ:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jhd-Qi-KRl"/>
                                     <action selector="BtnR:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gWT-HD-cgR"/>
                                 </connections>
                             </button>

@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
     //Array of question structures that was created
    var Questions = [ListofQuestions]() //Type Inference
    var questionNumber = Int()
-   var answerNumber = Int()
+    var answerNumber = Int()
    var score = Int()
     var currentQuestion = Int()
 
@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
 //            view.showsNodeCount = true
             
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //We will add our questions manually. There is an easier way of doing this as reading in questions from a file. Still learing the swift language
+            //We will add our questions manually. There is an easier way of doing this as reading in questions from a file. Still learning the swift language
             Questions = [ListofQuestions(Question: "In the UK, the abbreviation NHS stands for National what Service?", Answers: ["Humanity", "Health", "Honour", "Household"], Answer: 2),
                         ListofQuestions(Question: "Which Disney character famously leaves a glass slipper behind at a royal ball?", Answers: ["Pocahontas", "Sleeping Beauty", "Cinderella", "Elsa"], Answer: 3),
                          ListofQuestions(Question: "What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?", Answers: ["Hangar", "Terminal", "Concourse", "Carousel"], Answer: 3),
@@ -96,7 +96,7 @@ class GameViewController: UIViewController {
             //Random question generator
             questionNumber = Int(arc4random()) % Questions.count
             qLabel.text = Questions[questionNumber].Question //adds one of the question to the label
-            //We are using a number index to place the question in one of the for buttons
+            //We are using a number index to place the question in one of the four buttons
             x = currentQuestion
             Score(currentQuestion: &x)
         
@@ -151,23 +151,16 @@ class GameViewController: UIViewController {
         if currentQuestion == 8{
          score = 10000000
          gameScore.text = "$$ \(score)"
+         print("Congratulations: You have won the game!!")
         }
-        
         else {
             NSLog("Wrong Answer!")
         }
     }
     
-
-   // func updateScore(){
-      //  gameScore.value = score
-    //}
-
-    
-    
     @IBAction func Btn1(_ sender: Any) {
         if answerNumber == 0{
-            
+            print("That is correct")
             PickQuestion()
         }
         else{
@@ -186,11 +179,7 @@ class GameViewController: UIViewController {
          
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
@@ -201,11 +190,7 @@ class GameViewController: UIViewController {
             
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
@@ -216,19 +201,17 @@ class GameViewController: UIViewController {
             
         }
         else{
-            NSLog("Wrong Answer!") //We can maybe add you won this anount of cash in that statement.
-            //Add feature later
-            //End game
-            //game score divided by integer
-            //Equals to the amount of money user won
+            NSLog("Wrong Answer!")
         }
     }
     
-    @IBAction func BtnR(_ sender: Any) {
+    //Quit button to calculate final score and
+    @IBAction func BtnQ(_ sender: Any) {
         if answerNumber == 4{
-                    
+            let finalScore = Int(score)
+            print("You have 'Cashed-In' - Your score is: ")
+            print(finalScore)
                     //updateScore()
-                    
                 }
             }
         }
@@ -250,10 +233,10 @@ class GameViewController: UIViewController {
     }
 
 extension GameViewController: SKSceneDelegate{
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        let _: UITouch = touches.first!
-        _ = self.BtnR
+        
+        let _: UITouch = (touches.first)!
         
         let alert = UIAlertController(title: "Game Finished", message: "You have Cashed-In", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Would you like to start a new game?", style: .default, handler: nil))
